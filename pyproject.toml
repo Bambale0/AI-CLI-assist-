@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai_cli"
+version = "1.5.0"
+description = "Production-ready CLI wrapper around OpenAI/OpenRouter-like endpoints"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "happyarbuznik", email = "happyarbuznik@gmail.com"},
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "requests",
+    "python-dotenv",
+    "rich",
+    "prompt_toolkit",
+    "yaspin",
+    "tqdm",
+]
+
+[project.scripts]
+ai-cli = "ai_cli.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

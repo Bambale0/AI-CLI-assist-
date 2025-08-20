@@ -1,0 +1,2 @@
+[console_scripts]
+ai-cli = ai_cli.__main__:main

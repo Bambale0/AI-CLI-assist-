@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: ai_cli
+Version: 1.5.0
+Summary: Production-ready CLI wrapper around OpenAI/OpenRouter-like endpoints
+Author-email: happyarbuznik <happyarbuznik@gmail.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: python-dotenv
+Requires-Dist: rich
+Requires-Dist: prompt_toolkit
+Requires-Dist: yaspin
+Requires-Dist: tqdm

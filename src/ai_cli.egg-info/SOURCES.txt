@@ -1,0 +1,9 @@
+pyproject.toml
+src/ai_cli/__init__.py
+src/ai_cli/__main__.py
+src/ai_cli.egg-info/PKG-INFO
+src/ai_cli.egg-info/SOURCES.txt
+src/ai_cli.egg-info/dependency_links.txt
+src/ai_cli.egg-info/entry_points.txt
+src/ai_cli.egg-info/requires.txt
+src/ai_cli.egg-info/top_level.txt
