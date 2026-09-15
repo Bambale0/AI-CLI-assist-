@@ -17,7 +17,7 @@ This shared baseline supplements repository-specific rules; it never replaces st
 ### Mandatory feature preflight and CONTEXT ledger
 Before implementing any material feature or cross-cutting refactor, perform a fresh audit of the current repository state. Inspect relevant docs/specs/ADRs, code, schemas/migrations, auth, admin/config surfaces, tests, CI, integrations, and runtime telemetry when available.
 
-Maintain `CONTEXT.md` as a live execution ledger for active work. Record:
+Use the repository-designated execution ledger for active work. If `CONTEXT.md` is explicitly documented as that ledger, maintain it. If `CONTEXT.md` already serves another purpose, do not repurpose it; use an existing repository-local ledger path or create `docs/agents/EXECUTION.md`. Record:
 - baseline commit/SHA and current state;
 - what exists / is partial / is missing / can be reused;
 - risks, dependencies, migrations, integrations, permissions and rollout impact;
@@ -65,7 +65,7 @@ For every material feature, explicitly decide and verify where applicable:
 - observability/audit;
 - admin configurability / no-hardcode.
 
-A regression fix should get a regression test whenever technically feasible. Do not mark work complete until applicable acceptance criteria and focused/broader checks pass, CI is green for the exact commit, code review against repository standards and the originating spec is complete, and no unresolved high-severity finding remains.
+A regression fix should get a regression test whenever technically feasible. Do not mark work complete until applicable acceptance criteria and focused/broader checks pass; when repository CI exists and is accessible, it is green for the exact commit; code review against repository standards and the originating spec is complete; and no unresolved high-severity finding remains. If CI is unavailable or the repository has no CI, record that explicitly and run the closest available local checks instead.
 
 ### Delivery
 Final engineering reports should state: what changed; important files/components; skills/flows used; exact tests/checks and results; migrations/config/admin changes; risks/follow-ups; and PR/commit/deploy SHA when applicable.
